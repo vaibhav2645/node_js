@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+
+<body>
+  <div class="div1">
+    <div class="div2">
+      <div>
+        <h3>#</h3>
+      </div>
+      <div>
+        <h3>Name</h3>
+      </div>
+      <div>
+        <h3>Last</h3>
+      </div>
+      <div>
+        <h3>Buy/Sell price</h3>
+      </div>
+      <div>
+        <h3>Volume</h3>
+      </div>
+      <div>
+        <h3>Base_unit</h3>
+      </div>
+    </div>
+
+    <% for(var i=0; i < values.length; i++) { %>
+      <div class="div3">
+        <div>
+          <h3>
+            <%= i + 1 %>
+          </h3>
+        </div>
+        <div>
+          <h3>
+            <%= values[i].name %>
+          </h3>
+        </div>
+        <div>
+          <h3><%= parseInt(values[i].last).toLocaleString() %>
+          </h3>
+        </div>
+        <div>
+          <h3><%= parseInt(values[i].buy).toLocaleString()%>
+              &nbsp;/&nbsp;<%= parseInt(values[i].sell).toLocaleString() %>
+          </h3>
+        </div>
+        <div>
+          <h3>
+            <%= values[i].volume %>
+          </h3>
+        </div>
+        <div>
+          <h3>
+            <%= values[i].base_unit %>
+          </h3>
+        </div>
+      </div>
+      <% } %>
+  </div>
+</body>
+
+</html>
